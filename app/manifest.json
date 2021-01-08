@@ -1,0 +1,32 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 2,
+  "name": "微博(weibo)原图下载助手",
+  "version": "0.0.1",
+  "author": "rose2099.c@gmail.com",
+  "description": "功能列表：下载微博原图, 解析视频地址",
+  "icons": {
+    "128": "public/assets/icon/weibo.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": {},
+    "default_title": "微博助手",
+    "default_popup": "app/popup/index.html"
+  },
+  "permissions": ["downloads", "tabs", "storage"],
+  "background": {
+    "scripts": ["dist/background.entry.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": [
+         "*://weibo.com/*", 
+         "*://*.weibo.com/*",
+         "*://*.sinaimg.cn/*"
+    ],
+    "js": ["dist/inject.entry.js"],
+    "run_at": "document_end"
+  }]
+  // "web_accessible_resources": ["image/*", "resources/*", "dist/resources/*"]
+}
