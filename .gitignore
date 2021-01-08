@@ -8,6 +8,7 @@ yarn-error.log*
 tests/**/coverage/
 tests/e2e/reports
 selenium-debug.log
+dist-zip
 
 # Editor directories and files
 .idea
