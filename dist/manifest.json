@@ -1,12 +1,12 @@
 {
   "update_url": "https://clients2.google.com/service/update2/crx",
   "manifest_version": 2,
-  "name": "chrome_weibo_download",
+  "name": "微博(weibo)原图下载助手",
   "version": "1.0.1",
   "author": "rose2099.c@gmail.com",
   "description": "功能列表：下载微博原图, 解析视频地址",
   "icons": {
-    "128": "app/public/assets/icon/weibo.png"
+    "128": "public/assets/icon/weibo.png"
   },
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "browser_action": {
@@ -29,7 +29,8 @@
     {
       "matches": [
         "*://weibo.com/*",
-        "*://*.weibo.com/*"
+        "*://*.weibo.com/*",
+        "*://*.sinaimg.cn/*"
       ],
       "js": [
         "dist/inject.entry.js"
@@ -38,8 +39,6 @@
     }
   ],
   "web_accessible_resources": [
-    "image/*",
-    "resources/*",
-    "dist/resources/*"
+    "public/*"
   ]
 }

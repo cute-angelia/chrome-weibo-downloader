@@ -27,6 +27,6 @@
     ],
     "js": ["dist/inject.entry.js"],
     "run_at": "document_end"
-  }]
-  // "web_accessible_resources": ["image/*", "resources/*", "dist/resources/*"]
+  }],
+  "web_accessible_resources": ["public/*"]
 }

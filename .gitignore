@@ -21,3 +21,4 @@ dist-zip
 
 package-lock.json
 yarn.lock
+dist
