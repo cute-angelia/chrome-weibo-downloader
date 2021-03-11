@@ -20,13 +20,21 @@
     "persistent": false
   },
   "content_scripts": [{
-    "matches": [
-         "*://weibo.com/*", 
-         "*://*.weibo.com/*",
-         "*://*.sinaimg.cn/*"
-    ],
-    "js": ["dist/inject.entry.js"],
-    "run_at": "document_end"
-  }]
+      "matches": [
+        "*://weibo.com/*",
+        "*://*.weibo.com/*",
+        "*://*.sinaimg.cn/*"
+      ],
+      "js": ["dist/inject-weibo.entry.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "*://*.instagram.com/*"
+      ],
+      "js": ["dist/inject-instagram.entry.js"],
+      "run_at": "document_end"
+    }
+  ]
   // "web_accessible_resources": ["image/*", "resources/*", "dist/resources/*"]
 }

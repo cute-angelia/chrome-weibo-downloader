@@ -10,8 +10,9 @@ const DistPath = __dirname + '/dist'
 module.exports = {
   mode: 'production',
   entry: {
-    background: __dirname + '/app/background/background.js',
-    inject: __dirname + '/app/inject/inject.js',
+    'background': __dirname + '/app/background/background.js',
+    'inject-weibo': __dirname + '/app/inject/inject-weibo.js',
+    'inject-instagram': __dirname + '/app/inject/inject-instagram.js',
   },
   output: {
     path: __dirname + '/app/dist',
