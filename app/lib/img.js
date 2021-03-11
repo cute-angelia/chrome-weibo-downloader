@@ -1,5 +1,4 @@
 class Img {
-
   getImgName(img, prefix) {
     // 名字
     let name = ""
